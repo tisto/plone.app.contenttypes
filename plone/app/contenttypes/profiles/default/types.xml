@@ -7,7 +7,6 @@
  <object name="Event" remove="True"/>
  <object name="File" remove="True"/>
  <object name="Folder" remove="True"/>
- <object name="Image" remove="True"/>
  <object name="Link" remove="True"/>
  <object name="News Item" remove="True"/>
  <object name="Topic" remove="True"/>
@@ -16,7 +15,6 @@
  <object meta_type="Dexterity FTI" name="Folder" />
  <object meta_type="Dexterity FTI" name="Link" />
  <object meta_type="Dexterity FTI" name="File" />
- <object meta_type="Dexterity FTI" name="Image" />
  <object meta_type="Dexterity FTI" name="News Item" />
  <object meta_type="Dexterity FTI" name="Event" />
 
