@@ -22,7 +22,7 @@
          id="parent-fieldname-text" class="stx"
          tal:define="kss_class python:getKssClasses('text',
                      templateId=templateId, macro='text-field-view');
-                     has_text exists:context/aq_explicit/getText;
+                     has_text context/aq_explicit/getText|nothing;
                      text python:has_text and here.getText() or ''"
          tal:condition="text"
          tal:attributes="class python:test(here.Format() in ('text/structured',
@@ -37,7 +37,7 @@
                    tal:attributes="href string:${image/absolute_url}/view;
                                    title image/Description">
                     <span class="photoAlbumEntryWrapper">
-                    <img src="" alt="" tal:replace="structure image/@@images/image/thumb|nothing" />
+                    <img src="" alt="" tal:attributes="src string:${image/absolute_url}/@@images/image/thumb" />
                     </span>
                     <span class="photoAlbumEntryTitle" tal:content="image/pretty_title_or_id">
                        Title
