@@ -38,7 +38,7 @@
                         folderContents folderContents|nothing; folderContents python:folderContents or is_a_topic and context.queryCatalog(batch=True, **contentFilter) or context.getFolderContents(contentFilter, batch=True, b_size=limit_display or 100);
                         site_properties context/portal_properties/site_properties;
                         use_view_action site_properties/typesUseViewActionInListings|python:();
-                        Batch python:modules['Products.CMFPlone'].Batch;
+                        Batch python:modules['plone.batching'].Batch;
                         b_start python:request.get('b_start', 0);
                         batch python:isinstance(folderContents, Batch) and folderContents or Batch(folderContents, limit_display or 100, int(b_start), orphan=1);
                         isAnon context/@@plone_portal_state/anonymous;

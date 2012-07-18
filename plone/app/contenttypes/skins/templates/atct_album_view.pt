@@ -11,7 +11,7 @@
                  images result/images;
                  albums result/folders;
                  otherContents result/others;
-                 Batch python:modules['Products.CMFPlone'].Batch;
+                 Batch python:modules['plone.batching'].Batch;
                  b_start python:request.get('b_start', 0);
                  kssClassesView context/@@kss_field_decorator_view;
                  getKssClasses nocall:kssClassesView/getKssClassesInlineEditable;
@@ -37,7 +37,7 @@
                    tal:attributes="href string:${image/absolute_url}/view;
                                    title image/Description">
                     <span class="photoAlbumEntryWrapper">
-                    <img src="" alt="" tal:replace="structure image/@@images/image/thumb" />
+                    <img src="" alt="" tal:replace="structure image/@@images/image/thumb|nothing" />
                     </span>
                     <span class="photoAlbumEntryTitle" tal:content="image/pretty_title_or_id">
                        Title

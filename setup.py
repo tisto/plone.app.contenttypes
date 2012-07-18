@@ -30,6 +30,7 @@ setup(name='plone.app.contenttypes',
           'plone.app.dexterity',
           'plone.app.referenceablebehavior',
           'plone.app.relationfield',
+          'plone.batching',
           'plone.namedfile [blobs]',
           # -*- Extra requirements: -*-
       ],
