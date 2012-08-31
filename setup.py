@@ -26,7 +26,7 @@ setup(name='plone.app.contenttypes',
       install_requires=[
           'setuptools',
           'Products.CMFPlone',
-          'plone.app.collection',
+          'plone.app.collection>=2.0a1',
           'plone.app.dexterity',
           'plone.app.referenceablebehavior',
           'plone.app.relationfield',
@@ -38,7 +38,7 @@ setup(name='plone.app.contenttypes',
         'test': [
             'plone.app.testing',
             ],
-      },      
+      },
       entry_points="""
       # -*- Entry points: -*-
 
