@@ -59,7 +59,7 @@
                             <span class="photoAlbumEntryWrapper">
                                 <img src="" alt=""
                                      tal:condition="number_of_images"
-                                     tal:replace="structure random_image/@@images/image/thumb" />
+                                     tal:replace="structure random_image/@@images/image/thumb|nothing" />
                             </span>
                             <span class="photoAlbumEntryTitle">
                                <tal:title content="album/pretty_title_or_id">Title</tal:title>
